@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFdemo.Migrations
 {
     [DbContext(typeof(CodeFirstDbContext))]
-    [Migration("20201104185636_Initial")]
+    [Migration("20201105190825_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,6 +40,9 @@ namespace EFdemo.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    b.Property<string>("Address")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<int>("CollegeId")
                         .HasColumnType("int");

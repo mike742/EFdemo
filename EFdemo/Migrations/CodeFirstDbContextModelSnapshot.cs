@@ -39,6 +39,9 @@ namespace EFdemo.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<string>("Address")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
                     b.Property<int>("CollegeId")
                         .HasColumnType("int");
 

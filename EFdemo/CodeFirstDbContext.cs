@@ -1,18 +1,21 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Text;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EFdemo
 {
+    //[Table("tblStudents")]
     public class Student
     {
         public int Id { set; get; }
+        //[Column("StudentName")]
         public string Name { set; get; }
         public string Email { set; get; }
         public int CollegeId { set; get; }
-
+        //[ForeignKey("CollegeId")]
         public College College { get; set; }
+
+        public string Address { set; get; }
     }
 
     public class College
